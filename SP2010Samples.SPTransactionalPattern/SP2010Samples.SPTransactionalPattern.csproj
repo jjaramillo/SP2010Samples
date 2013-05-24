@@ -46,6 +46,7 @@
     <Compile Include="CreateCommand.cs" />
     <Compile Include="DeleteCommand.cs" />
     <Compile Include="ICommand.cs" />
+    <Compile Include="MoveCommand.cs" />
     <Compile Include="SPCommandCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SPCommand.cs" />
