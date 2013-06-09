@@ -5,9 +5,9 @@ namespace SP2010Samples.PostIt.Core.Commands.SPListItem
 {
     public class AddCommand : SPCommand
     {
-        private SP.SPListItem _item;
-        private string _listName;
-        private SP.SPList _list;
+        protected SP.SPListItem _item;
+        protected string _listName;
+        protected SP.SPList _list;
 
         public SP.SPListItem Item { get { return _item; } }
         public string ListName { get { return _listName; } }
@@ -38,12 +38,12 @@ namespace SP2010Samples.PostIt.Core.Commands.SPListItem
             DeleteElementFromList();
         }
 
-        private void AddElementToList()
+        protected void AddElementToList()
         {
             _item = _list.AddItem();
         }
 
-        private void DeleteElementFromList()
+        protected void DeleteElementFromList()
         {
             _item.Delete();
         }
