@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field
+       ID="{4e4356f2-266d-4adb-8403-9d51aef47d56}"
+       Name="PI_Description"
+       StaticName="PI_Description"
+       DisplayName="Description"
+       Type="Text"
+       Required="TRUE"
+       Group="Post It">
+  </Field>
+  <Field
+      ID="{B8E9ABDA-3671-47B0-BCC7-8336F3487DB0}"
+      Name="PI_Priority"
+      StaticName="PI_Priority"
+      Type="Choice"
+      Required="TRUE"
+      Group="Post It"
+      DisplayName="Priority">
+    <Default>Low</Default>
+    <CHOICES>
+      <CHOICE>Low</CHOICE>
+      <CHOICE>Medium</CHOICE>
+      <CHOICE>High</CHOICE>
+    </CHOICES>
+  </Field>
+  <Field
+      ID="{DA5C3A15-7A64-4349-AB3E-521B6D21459E}"
+      Name="PI_Owner"
+      StaticName="PI_Owner"
+      Type="User"
+      Group="Post It"
+      DisplayName="Owner"
+      Required="TRUE">
+  </Field>
+  <Field
+      ID="{30390B14-E301-4278-8E75-269F4BCCAEE5}"
+      Name="PI_Users"
+      StaticName="PI_Users"
+      Type="User"
+      Mult="TRUE"
+      Group="Post It"
+      DisplayName="Users"
+      Required="TRUE">    
+  </Field>
+</Elements>

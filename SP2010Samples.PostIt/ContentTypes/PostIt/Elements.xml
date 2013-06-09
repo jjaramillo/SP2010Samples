@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100A24EA2E8AF5741D69AEA5589D61325E5" Name="Post It" Group="Post It" Description="Sticky notes for you to put reminders and just stuff!" Inherits="TRUE" Version="0" ReadOnly="TRUE">
+    <FieldRefs>
+      <FieldRef ID="{4e4356f2-266d-4adb-8403-9d51aef47d56}" DisplayName="Description" Required="TRUE" Name="PI_Description" />
+      <FieldRef ID="{B8E9ABDA-3671-47B0-BCC7-8336F3487DB0}" DisplayName="Priority" Required="TRUE" Name="PI_Priority" />
+      <FieldRef ID="{DA5C3A15-7A64-4349-AB3E-521B6D21459E}" DisplayName="Owner" Required="TRUE" Name="PI_Owner" />
+      <FieldRef ID="{30390B14-E301-4278-8E75-269F4BCCAEE5}" DisplayName="Users" Required="TRUE" Name="PI_Users" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

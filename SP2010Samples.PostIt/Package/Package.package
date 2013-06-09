@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="65361d00-1d2b-433b-8ca4-0f0c2c26c724" solutionId="65361d00-1d2b-433b-8ca4-0f0c2c26c724" resetWebServer="false" name="SP2010Samples.PostIt" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="b142e8ad-7e99-47d1-b00b-aafa19ba2ef7" />
+  </features>
+</package>

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SP2010Samples.SPTransactionalPattern", "SP2010Samples.SPTransactionalPattern\SP2010Samples.SPTransactionalPattern.csproj", "{165857C2-06C1-46FE-AAE8-E140FD713E63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SP2010Samples.PostIt", "SP2010Samples.PostIt\SP2010Samples.PostIt.csproj", "{966219C6-747E-451C-8710-4558CF11808D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,12 @@ Global
 		{165857C2-06C1-46FE-AAE8-E140FD713E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{165857C2-06C1-46FE-AAE8-E140FD713E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{165857C2-06C1-46FE-AAE8-E140FD713E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966219C6-747E-451C-8710-4558CF11808D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966219C6-747E-451C-8710-4558CF11808D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966219C6-747E-451C-8710-4558CF11808D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{966219C6-747E-451C-8710-4558CF11808D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966219C6-747E-451C-8710-4558CF11808D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966219C6-747E-451C-8710-4558CF11808D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

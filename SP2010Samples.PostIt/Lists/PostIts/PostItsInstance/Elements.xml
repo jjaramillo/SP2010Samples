@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Post Its" OnQuickLaunch="FALSE" TemplateType="10000" Url="Lists/PostIts" Description="A collection of reminders and sticky notes created and shared by users&#xD;&#xA;"></ListInstance>
+</Elements>
