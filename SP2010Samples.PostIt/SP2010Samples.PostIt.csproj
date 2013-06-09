@@ -51,6 +51,9 @@
     <Compile Include="Core\Commands\ICommand.cs" />
     <Compile Include="Core\Commands\SPCommand.cs" />
     <Compile Include="Core\Commands\SPCommandCollection.cs" />
+    <Compile Include="Core\Commands\SPFolder\AddCommand.cs" />
+    <Compile Include="Core\Commands\SPFolder\DeleteCommand.cs" />
+    <Compile Include="Core\Commands\SPFolder\UpdateCommand.cs" />
     <Compile Include="Core\Commands\SPListItem\AddCommand.cs" />
     <Compile Include="Core\Commands\SPListItem\DeleteCommand.cs" />
     <Compile Include="Core\Commands\SPListItem\UpdateCommand.cs" />
@@ -85,7 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\Commands\SPFile\" />
-    <Folder Include="Core\Commands\SPFolder\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ContentTypes\PostIt\Elements.xml" />
