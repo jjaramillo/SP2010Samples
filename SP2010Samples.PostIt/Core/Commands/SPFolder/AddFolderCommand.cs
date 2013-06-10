@@ -10,6 +10,8 @@ namespace SP2010Samples.PostIt.Core.Commands.SPFolder
         protected string _folderName;
         protected SP.SPFolder _folder;
 
+        public SP.SPList List { get { return _list; } }
+
         public AddFolderCommand(SP.SPList list, string folderName, SP.SPWeb web)
             : base(web)
         {
@@ -38,8 +40,13 @@ namespace SP2010Samples.PostIt.Core.Commands.SPFolder
 
         protected virtual void AddFolderToList()
         {
-            SP.SPFolderCollection listFolders = _list.RootFolder.SubFolders;
-            _folder = listFolders.Add(_folderName);
+            string folderUrl = string.Format("{0}/{1}/{2}", _web.Url, _list.RootFolder.Url, _folderName);
+            _folder = _web.GetFolder(folderUrl);
+            if (!_folder.Exists)
+            {
+                SP.SPFolderCollection listFolders = _list.RootFolder.SubFolders;
+                _folder = listFolders.Add(_folderName);
+            }
         }
 
         protected virtual void DeleteFolderFromList()        
