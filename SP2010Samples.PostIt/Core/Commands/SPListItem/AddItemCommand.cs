@@ -3,7 +3,7 @@ using SP = Microsoft.SharePoint;
 
 namespace SP2010Samples.PostIt.Core.Commands.SPListItem
 {
-    public class AddCommand : SPCommand
+    public class AddItemCommand : SPCommand
     {
         protected SP.SPListItem _item;
         protected string _listName;
@@ -13,14 +13,14 @@ namespace SP2010Samples.PostIt.Core.Commands.SPListItem
         public string ListName { get { return _listName; } }
         public SP.SPList List { get { return _list; } }
 
-        public AddCommand(SP.SPList list, SP.SPWeb web)
+        public AddItemCommand(SP.SPList list, SP.SPWeb web)
             : base(web)
         {
             _listName = list.Title;
             _list = list;
         }
 
-        public AddCommand(string listName, SP.SPWeb web)
+        public AddItemCommand(string listName, SP.SPWeb web)
             : base(web)
         {
             _listName = listName;

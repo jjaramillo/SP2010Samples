@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using SP = Microsoft.SharePoint;
 
-namespace SP2010Samples.PostIt.Core.Commands.SPListItem
+namespace SP2010Samples.PostIt.Core.Commands.SPFolder
 {
-    public class UpdateCommand : SPCommand
+    public class UpdateFolderCommand : SPCommand
     {
         protected SP.SPListItem _item;
         protected Dictionary<string, object> _oldPropertiesValues;
@@ -13,21 +13,30 @@ namespace SP2010Samples.PostIt.Core.Commands.SPListItem
 
         public SP.SPListItem Item { get { return _item; } }
 
-        public UpdateCommand(SP.SPListItem item, Dictionary<string, object> properties)
+        public UpdateFolderCommand(SP.SPFolder folder, Dictionary<string, object> properties)
             : base()
         {
-            _web = item.Web;
-            _item = item;
+            _web = folder.ParentWeb;
+            _item = folder.Item;
             _newPropertiesValues = properties;
             BackUpOldPropertiesValues();
         }
 
-        public UpdateCommand(int itemID, string listName, Dictionary<string, object> properties, SP.SPWeb web)
+        public UpdateFolderCommand(int itemID, string listName, Dictionary<string, object> properties, SP.SPWeb web)
             : base(web)
         {
             SP.SPList targetList = _web.Lists.TryGetList(listName);
             if (targetList == default(SP.SPList)) { throw new Exception(string.Format("Could not find any list with the name {0}", listName)); }
             _item = targetList.GetItemByIdSelectedFields(itemID, properties.Keys.ToArray());
+            BackUpOldPropertiesValues();
+        }
+
+        public UpdateFolderCommand(string folderUrl, Dictionary<string, object> properties, SP.SPWeb web)
+            : base(web)
+        {
+            SP.SPFolder folder = _web.GetFolder(folderUrl);
+            if (!folder.Exists) { throw new Exception(string.Format("Could not find any folder with the url {0}", folder)); }
+            _item = folder.Item;
             BackUpOldPropertiesValues();
         }
 

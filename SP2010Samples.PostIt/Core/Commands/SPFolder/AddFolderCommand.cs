@@ -3,14 +3,14 @@ using SP = Microsoft.SharePoint;
 
 namespace SP2010Samples.PostIt.Core.Commands.SPFolder
 {
-    public class AddCommand : SPCommand
+    public class AddFolderCommand : SPCommand
     {
         protected string _listName;
         protected SP.SPList _list;
         protected string _folderName;
         protected SP.SPFolder _folder;
 
-        public AddCommand(SP.SPList list, string folderName, SP.SPWeb web)
+        public AddFolderCommand(SP.SPList list, string folderName, SP.SPWeb web)
             : base(web)
         {
             _listName = list.Title;
@@ -18,7 +18,7 @@ namespace SP2010Samples.PostIt.Core.Commands.SPFolder
             _folderName = folderName;
         }
 
-        public AddCommand(string listName, string folderName, SP.SPWeb web)
+        public AddFolderCommand(string listName, string folderName, SP.SPWeb web)
             : base(web)
         {
             _folderName = folderName;
