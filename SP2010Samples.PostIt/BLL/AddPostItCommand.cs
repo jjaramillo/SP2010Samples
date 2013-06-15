@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Microsoft.SharePoint;
 using SP2010Samples.PostIt.Core.Commands;
 using SP2010Samples.PostIt.Core.Commands.SPFolder;
 using SP2010Samples.PostIt.Core.Commands.SPListItem;
 
-namespace SP2010Samples.PostIt.DAL
+namespace SP2010Samples.PostIt.BLL
 {
     public class AddPostItCommand : SPCommandCollection
     {
