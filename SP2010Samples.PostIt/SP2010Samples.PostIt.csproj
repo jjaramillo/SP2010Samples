@@ -61,11 +61,18 @@
     <Compile Include="Core\Commands\SPListItem\DeleteItemCommand.cs" />
     <Compile Include="Core\Commands\SPListItem\UpdateItemCommand.cs" />
     <Compile Include="BLL\AddPostItCommand.cs" />
+    <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\LookUp.cs" />
+    <Compile Include="Entities\PostIt.cs" />
+    <Compile Include="Entities\Priority.cs" />
     <Compile Include="ISAPI\PostItService.asmx.cs">
       <DependentUpon>PostItService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\PostItsWebpart\PostItsWebpart.ascx.cs">
+      <DependentUpon>PostItsWebpart.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ContentTypes\PostIt\SharePointProjectItem.spdata">
@@ -73,6 +80,12 @@
     </None>
     <None Include="Features\Feature1\Feature1.feature">
       <FeatureId>{b142e8ad-7e99-47d1-b00b-aafa19ba2ef7}</FeatureId>
+    </None>
+    <None Include="Features\Feature2\Feature2.feature">
+      <FeatureId>{7fcaf153-c622-4d41-a4c2-bb5dd4deeaa4}</FeatureId>
+    </None>
+    <None Include="INC\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{28741019-2cda-4b37-9dd7-3357459274bf}</SharePointProjectItemId>
     </None>
     <None Include="ISAPI\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{c9918732-13c8-41a3-83ae-883b1532e5e1}</SharePointProjectItemId>
@@ -96,21 +109,35 @@
     <None Include="SiteColumns\PostItsSiteColumns\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3debc58e-01d7-47ff-a152-b55aff853aa5}</SharePointProjectItemId>
     </None>
+    <None Include="UI\PostItsWebpart\PostItsWebpart.webpart" />
+    <None Include="UI\PostItsWebpart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fc429315-bea3-4dfd-bdb0-56ad3521c328}</SharePointProjectItemId>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\Commands\SPFile\" />
+    <Folder Include="Presenter\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ContentTypes\PostIt\Elements.xml" />
     <Content Include="Features\Feature1\Feature1.Template.xml">
       <DependentUpon>Feature1.feature</DependentUpon>
     </Content>
+    <Content Include="Features\Feature2\Feature2.Template.xml">
+      <DependentUpon>Feature2.feature</DependentUpon>
+    </Content>
+    <Content Include="INC\SP2010Samples.PostIt\css\PostIt.css" />
     <Content Include="ISAPI\PostItService.asmx" />
     <Content Include="Lists\PostItAttachments\Elements.xml" />
     <Content Include="Lists\PostIts\Elements.xml" />
     <Content Include="Lists\PostIts\PostItsInstance\Elements.xml" />
     <Content Include="Lists\PostIts\Schema.xml" />
     <Content Include="SiteColumns\PostItsSiteColumns\Elements.xml" />
+    <Content Include="UI\PostItsWebpart\Elements.xml" />
+    <Content Include="UI\PostItsWebpart\PostItsWebpart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
